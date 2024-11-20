@@ -1,11 +1,12 @@
-const potteryForSale = []
+ const potteryForSale = []
 
 export const toSellOrNotToSell = (potteryItem) => {
+   
     if (potteryItem.cracked === 'true') {
         return potteryItem;
     }
     potteryItem.price = 0;
-    if (potteryItem.weight >= 6) {
+    if (potteryItem.Weight >= 6) {
          potteryItem.price = 40; }
     else {
          potteryItem.price = 20; }
