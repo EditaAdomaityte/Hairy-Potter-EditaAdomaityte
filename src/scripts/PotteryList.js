@@ -13,7 +13,7 @@ export const PotteryList = () => {
                  <div class="pottery__properties">
                      Item weighs ${item.Weight} grams and is ${item.height} cm in height
                  </div>
-                  <div class="pottery__price">Price is ${item.price}
+                  <div class="pottery__price">Price is ${item.price}$
                 </div>
         </section>
         `

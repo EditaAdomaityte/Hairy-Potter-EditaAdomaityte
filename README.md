@@ -120,12 +120,28 @@ In the `main.js` module, invoke the `PotteryList` component function. Take its r
 > 🧨 Before you click the "Assessment Complete" button on the Learning Platform, add your answers below for each question and make a commit. It is your option to request a face-to-face meeting with a coach for a vocabulary review.
 
 1. Explain how you got the HTML, with the correct data, displayed in the browser?
-   > Your answer here
+  > 1.I made <div> element in HTML file with id "potteryList", 
+   2.In the main.js module I created variable domElementToUpdate = document.getElementById("potteryList") which found element "potteryList" in the index.html file. 
+   3.In domElementToUpdate.innerHTML = `${lisToShow}` innerHTML lets to access the inner part of  <div>and place a value of a string that was created for each item of the lsit.
 2. In the **PotteryList** module, when you iterate your pottery, you need to show the evidence of what the **weight** property's value is for the 2nd piece of pottery. Use [Loom](https://www.loom.com/) to record your browser window with the developer tools open and show those values.
-   > Paste your video's public URL here
+   > https://www.loom.com/share/55a7fa36258f4fa49be3154824c32b3c?sid=e3841f3d-c7ac-4be1-a091-cf583a14439d
 3. The **PotteryWheel** module has a single function named `makePottery`. Why doesn't that module have all of the other code in it?
-   > Your answer here
+   > The potteryId is  outside the function because we do not want it to reset every time function is ran.We do want it to grow every time the function is ran so evry item would get new id#. this is also why it was declered with let, not const.
 4. The pottery shop has learned that there is a set of customers that are willing to buy cracked pottery at a discounted price of $2.50. That means that the cracked pottery should now be displayed in the catalog. Explain the changes that this new business strategy would cause to your algorithm.
-   > Your answer here
+   > I would change module PotteryCatalog.js where the price is determined:
+
+   export const toSellOrNotToSell = (potteryItem) => {
+   
+       potteryItem.price = 0;
+        if (potteryItem.Weight >=6 && potteryItem.cracked === 'false') {
+             potteryItem.price = 40; }
+        else if(potteryItem.Weight <6 && potteryItem.cracked === 'false'){
+             potteryItem.price = 20; }
+        else {potteryItem.price = 2.50}
+      potteryForSale.push(potteryItem);
+      return potteryItem;
+    
+}
+
 5. In the **Kiln** module, you have a `firePottery()` function. You need to demonstrate how to use the debugger to verify the values of the parameters for that function when your code runs. Use [Loom](https://www.loom.com/) to record your browser window with the developer tools open and show those values.
-   > Paste your video's public URL here
+   > https://www.loom.com/share/cadefaf15d2b4ebe85d11fb9555fe614?sid=e197ed82-ade6-4e80-b08a-d3ab4810c2d0

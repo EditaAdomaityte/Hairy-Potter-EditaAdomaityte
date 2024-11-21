@@ -1,6 +1,6 @@
  const potteryForSale = []
 
-export const toSellOrNotToSell = (potteryItem) => {
+ export const toSellOrNotToSell = (potteryItem) => {
    
     if (potteryItem.cracked === 'true') {
         return potteryItem;
