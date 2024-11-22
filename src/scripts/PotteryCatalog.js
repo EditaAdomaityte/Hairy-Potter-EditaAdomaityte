@@ -2,7 +2,7 @@
 
  export const toSellOrNotToSell = (potteryItem) => {
    
-    if (potteryItem.cracked === 'true') {
+    if (potteryItem.cracked === true) {
         return potteryItem;
     }
     potteryItem.price = 0;
@@ -16,5 +16,5 @@
 
 
 export const usePottery = () => {
-    return potteryForSale
+    return structuredClone(potteryForSale)
 }

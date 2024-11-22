@@ -1,5 +1,5 @@
 import { firePottery } from "./Kiln.js"
-import { toSellOrNotToSell } from "./PotteryCatalog.js"
+import { toSellOrNotToSell, usePottery } from "./PotteryCatalog.js"
 import { PotteryList } from "./PotteryList.js"
 import { makePottery } from "./PotteryWheel.js"
 
@@ -24,7 +24,7 @@ toSellOrNotToSell(plate)
 toSellOrNotToSell(fruitBowl)
 toSellOrNotToSell(teaCup)
 
-const lisToShow = PotteryList()
+const lisToShow = PotteryList(usePottery())
 console.log(lisToShow)
 const domElementToUpdate = document.getElementById("potteryList")
 

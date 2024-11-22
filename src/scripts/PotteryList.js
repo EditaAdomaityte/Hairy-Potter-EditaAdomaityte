@@ -1,9 +1,6 @@
-import { usePottery } from "./PotteryCatalog.js"
 
 
-const list = usePottery()
-console.log (list)
-export const PotteryList = () => {
+export const PotteryList = (list) => {
     let toSellListHTML = '';
 
     for (const item of list) {
